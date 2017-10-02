@@ -6,7 +6,7 @@ function main() {
     zoomControl: true,
     center: [20, -100],
     zoom: 3,
-	minZoom: 2,
+    minZoom: 2,
     maxZoom: 18
   });
   
@@ -243,11 +243,11 @@ function main() {
             $('.here').html("");
             var label = list.label;
             $('#image').append('<h2>' + label + '</h2>');
-			     var image = list.image;
+           var image = list.image;
            if (image.split('/').indexOf('blank_image.png') !== -1) {
              image = 'images/blank_image.png';
            }
-			     $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
+           $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
             var title = list.title;
             var titletwo = list.titletwo;
             $('.here').append('<h3>'+ title + '&nbsp&nbsp&nbsp'+titletwo+'</h3>');
@@ -343,16 +343,16 @@ function main() {
                     $('.here').html("");
                     var label = list.label;
                     $('#image').append('<h2>' + label + '</h2>');
-					        var image = list.image;
+                  var image = list.image;
                   if (image.split('/').indexOf('blank_image.png') !== -1) {
                     image = 'images/blank_image.png';
                   }
-					        $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
+                  $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
                     var title = list.title;
                     var titletwo = list.titletwo;
                     $('.here').append('<h3>'+ title + '&nbsp&nbsp&nbsp'+titletwo+'</h3>');
-		               var type = list.type;
-		               $('.here').append('<h3>' + type + '</h3>');
+                   var type = list.type;
+                   $('.here').append('<h3>' + type + '</h3>');
                     var college = list.college;
                     $('.here').append('<h3>' + college + '</h3>');
                     var collegetwo = list.collegetwo;
@@ -386,16 +386,16 @@ function main() {
                     var label = list.label;
                     console.log(label);
                     $('#image').append('<h2>' + label + '</h2>');
-					        var image = list.image;
+                  var image = list.image;
                   if (image.split('/').indexOf('blank_image.png') !== -1) {
                     image = 'images/blank_image.png';
                   }
-					        $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
+                  $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
                     var title = list.title;
                     var titletwo = list.titletwo;
                     $('.here').append('<h3>'+ title + '&nbsp&nbsp&nbsp'+titletwo+'</h3>');
-		               var type = list.type;
-		               $('.here').append('<h3>' + type + '</h3>');
+                   var type = list.type;
+                   $('.here').append('<h3>' + type + '</h3>');
                     var college = list.college;
                     $('.here').append('<h3>' + college + '</h3>');
                     var collegetwo = list.collegetwo;
@@ -465,18 +465,18 @@ function leftMenu(){
 	
 	//Top - change top nav menu states
 	$('#top-nav .menu-toggle a').click(function() {
-		//expand the menu
-		$(this).toggleClass('open');
-     $('#top-nav ul.submenu').removeClass('expand');		
-		$('#top-nav .menu').toggleClass('expand');
-		$('#top-nav2 .menu').removeClass('expand');
-     $('#top-nav2 ul.submenu').removeClass('expand');		
-     $('#top-nav2 ul.subsub').removeClass('expand');		
-		$('#top-nav3 .menu').removeClass('expand');
-     $('#top-nav3 ul.submenu').removeClass('expand');		
-     $('#top-nav3 ul.subsub').removeClass('expand');		
+    //expand the menu
+    $(this).toggleClass('open');
+     $('#top-nav ul.submenu').removeClass('expand');    
+    $('#top-nav .menu').toggleClass('expand');
+    $('#top-nav2 .menu').removeClass('expand');
+     $('#top-nav2 ul.submenu').removeClass('expand');    
+     $('#top-nav2 ul.subsub').removeClass('expand');    
+    $('#top-nav3 .menu').removeClass('expand');
+     $('#top-nav3 ul.submenu').removeClass('expand');    
+     $('#top-nav3 ul.subsub').removeClass('expand');    
       //figure out whether the indicator should be changed to + or -
-		return false;
+    return false;
 	});
 	
 	//Top - submenu items
@@ -514,51 +514,51 @@ function midMenu(){
 	
 	//Top - change top nav menu states
 	$('#top-nav2 .menu-toggle2 a').click(function() {
-		//expand the menu
-		$(this).toggleClass('open');
-		$('#top-nav2 .menu').toggleClass('expand');
-		$('#top-nav2 ul.submenu').removeClass('expand');
-		$('#top-nav .menu').removeClass('expand');
-     $('#top-nav ul.submenu').removeClass('expand');		
-		$('#top-nav3 .menu').removeClass('expand');
-     $('#top-nav3 ul.submenu').removeClass('expand');		
-		return false;
+    //expand the menu
+    $(this).toggleClass('open');
+    $('#top-nav2 .menu').toggleClass('expand');
+    $('#top-nav2 ul.submenu').removeClass('expand');
+    $('#top-nav .menu').removeClass('expand');
+     $('#top-nav ul.submenu').removeClass('expand');    
+    $('#top-nav3 .menu').removeClass('expand');
+     $('#top-nav3 ul.submenu').removeClass('expand');    
+    return false;
 	});
 	
 	//Top - submenu items
 	$('#top-nav2 .menu h3').click(function(){
     $('#top-nav2 ul.subsub').removeClass('expand');
 
-		//find the current submenu
-		var currentItem = $(this).siblings('.submenu');
-		//close other submenus by removing the expand class
+    //find the current submenu
+    var currentItem = $(this).siblings('.submenu');
+    //close other submenus by removing the expand class
     if(currentItem.length > 0){
-		$('#top-nav2 ul.submenu').not(currentItem).removeClass('expand');
-		//change the indicator of any closed submenus
-		$(this).toggleClass('open').siblings('.submenu').toggleClass('expand');
+    $('#top-nav2 ul.submenu').not(currentItem).removeClass('expand');
+    //change the indicator of any closed submenus
+    $(this).toggleClass('open').siblings('.submenu').toggleClass('expand');
     }
     else {
       $('#top-nav2 .menu').removeClass('expand');
     }
-      return false;		
+      return false;    
 	});
   
 	
 	//Top - subsubmenu items
 	$('#top-nav2 .submenu li a').click(function(){
-		
-		//find the current submenu
-		var currentItem = $(this).siblings('.subsub');
-		//close other submenus by removing the expand class
+    
+    //find the current submenu
+    var currentItem = $(this).siblings('.subsub');
+    //close other submenus by removing the expand class
     if(currentItem.length > 0){
-		$('#top-nav2 ul.subsub').not(currentItem).removeClass('expand');
-		//change the indicator of any closed submenus
-		$(this).toggleClass('open').siblings('.subsub').toggleClass('expand');
+    $('#top-nav2 ul.subsub').not(currentItem).removeClass('expand');
+    //change the indicator of any closed submenus
+    $(this).toggleClass('open').siblings('.subsub').toggleClass('expand');
     }
     else {
       $('#top-nav2 .menu').removeClass('expand');
     }
-      return false;		
+      return false;    
 	});
   $('#top-nav2 ul.subsub').click(function(){
     $('#top-nav2 .menu').removeClass('expand');
@@ -582,28 +582,28 @@ function rightMenu(){
 	
 	//Top - change top nav menu states
 	$('#top-nav3 .menu-toggle3 a').click(function() {
-		//expand the menu
-		$(this).toggleClass('open');
-		$('#top-nav .menu').removeClass('expand');
-        $('#top-nav ul.submenu').removeClass('expand');		
-		$('#top-nav2 .menu').removeClass('expand');
-        $('#top-nav2 ul.submenu').removeClass('expand');		
-		$('#top-nav3 .menu').toggleClass('expand');
-		return false;
+    //expand the menu
+    $(this).toggleClass('open');
+    $('#top-nav .menu').removeClass('expand');
+        $('#top-nav ul.submenu').removeClass('expand');    
+    $('#top-nav2 .menu').removeClass('expand');
+        $('#top-nav2 ul.submenu').removeClass('expand');    
+    $('#top-nav3 .menu').toggleClass('expand');
+    return false;
 	});
 	
 	//Top - submenu items
 	$('#top-nav3 .menu h3').click(function(){
-		
-		//find the current submenu
-		var currentItem = $(this).siblings('.submenu');
-		//close other submenus by removing the expand class
+    
+    //find the current submenu
+    var currentItem = $(this).siblings('.submenu');
+    //close other submenus by removing the expand class
     if(currentItem.length > 0){
-		$('#top-nav3 ul.submenu').not(currentItem).removeClass('expand');
-		//change the indicator of any closed submenus
-		//open the selected submenu
-		$(this).toggleClass('open').siblings('.submenu').toggleClass('expand');
-      return false;		
+    $('#top-nav3 ul.submenu').not(currentItem).removeClass('expand');
+    //change the indicator of any closed submenus
+    //open the selected submenu
+    $(this).toggleClass('open').siblings('.submenu').toggleClass('expand');
+      return false;    
     }
     else {
       $('#top-nav3 .menu').removeClass('expand');
@@ -617,12 +617,12 @@ function rightMenu(){
       $('#top-nav .menu').removeClass('expand');
       $('#top-nav2 .menu').removeClass('expand');
       $('#top-nav3 .menu').removeClass('expand');
-		  $('#top-nav ul.submenu').removeClass('expand');
-		  $('#top-nav2 ul.submenu').removeClass('expand');
-		  $('#top-nav3 ul.submenu').removeClass('expand');
-		  $('#top-nav ul.subsub').removeClass('expand');
-		  $('#top-nav2 ul.subsub').removeClass('expand');
-		  $('#top-nav3 ul.subsub').removeClass('expand');
+      $('#top-nav ul.submenu').removeClass('expand');
+      $('#top-nav2 ul.submenu').removeClass('expand');
+      $('#top-nav3 ul.submenu').removeClass('expand');
+      $('#top-nav ul.subsub').removeClass('expand');
+      $('#top-nav2 ul.subsub').removeClass('expand');
+      $('#top-nav3 ul.subsub').removeClass('expand');
   });
 }
 
@@ -640,12 +640,12 @@ if (/(iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
 	/* Since iOS 6 and up don't have this bug, apply fix to iOS versions 5 or less */
 	if (/OS [1-5](.*) like Mac OS X/i.test(navigator.userAgent)) {
 	  var viewportmeta = document.querySelector('meta[name="viewport"]');
-		if (viewportmeta) {
-			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
-			document.body.addEventListener('gesturestart', function () {
-				viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=10.0';
-			}, false);
-		}
+    if (viewportmeta) {
+    	viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+    	document.body.addEventListener('gesturestart', function () {
+        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=10.0';
+    	}, false);
+    }
 	}
 }
 
