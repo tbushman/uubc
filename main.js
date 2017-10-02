@@ -242,30 +242,24 @@ function main() {
             $('.here-title').html("");
             $('.here').html("");
             var label = list.label;
-            console.log(label);
             $('#image').append('<h2>' + label + '</h2>');
 			     var image = list.image;
-			     console.log(image);
+           if (image.split('/').indexOf('blank_image.png') !== -1) {
+             image = 'images/blank_image.png';
+           }
 			     $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
             var title = list.title;
             var titletwo = list.titletwo;
-            console.log(titletwo);
-            console.log(title);
             $('.here').append('<h3>'+ title + '&nbsp&nbsp&nbsp'+titletwo+'</h3>');
             var type = list.type;
-            console.log(type);
             $('.here').append('<h3>' + type + '</h3>');
             var college = list.college;
-            console.log(college);
             $('.here').append('<h3>' + college + '</h3>');
             var collegetwo = list.collegetwo;
-            console.log(collegetwo);
             $('.here').append('<h3>' + collegetwo + '</h3>');
             var description = list.description;
-            console.log(description);
             $('.here').append('<p>' + description + '</p>');
             var link = list.link;
-            console.log(link);
             $('.here').append('<a href="' + link + '" target="_blank">'+'Click here for more info.'+'</a>');
           });
         });
@@ -348,30 +342,24 @@ function main() {
                     $('.here-title').html("");
                     $('.here').html("");
                     var label = list.label;
-                    console.log(label);
                     $('#image').append('<h2>' + label + '</h2>');
 					        var image = list.image;
-					        console.log(image);
+                  if (image.split('/').indexOf('blank_image.png') !== -1) {
+                    image = 'images/blank_image.png';
+                  }
 					        $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
                     var title = list.title;
                     var titletwo = list.titletwo;
-                    console.log(titletwo);
-                    console.log(title);
                     $('.here').append('<h3>'+ title + '&nbsp&nbsp&nbsp'+titletwo+'</h3>');
 		               var type = list.type;
-		               console.log(type);
 		               $('.here').append('<h3>' + type + '</h3>');
                     var college = list.college;
-                    console.log(college);
                     $('.here').append('<h3>' + college + '</h3>');
                     var collegetwo = list.collegetwo;
-                    console.log(collegetwo);
                     $('.here').append('<h3>' + collegetwo + '</h3>');
                     var description = list.description;
-                    console.log(description);
                     $('.here').append('<p>' + description + '</p>');
                     var link = list.link;
-                    console.log(link);
                     $('.here').append('<a href="' + link + '" target="_blank">'+'Click here for more info.'+'</a>');
                   });
                 });
@@ -399,27 +387,22 @@ function main() {
                     console.log(label);
                     $('#image').append('<h2>' + label + '</h2>');
 					        var image = list.image;
-					        console.log(image);
+                  if (image.split('/').indexOf('blank_image.png') !== -1) {
+                    image = 'images/blank_image.png';
+                  }
 					        $('#image').append('<div class="gradient"></div><img src="'+image+'" class="image-here">');
                     var title = list.title;
                     var titletwo = list.titletwo;
-                    console.log(titletwo);
-                    console.log(title);
                     $('.here').append('<h3>'+ title + '&nbsp&nbsp&nbsp'+titletwo+'</h3>');
 		               var type = list.type;
-		               console.log(type);
 		               $('.here').append('<h3>' + type + '</h3>');
                     var college = list.college;
-                    console.log(college);
                     $('.here').append('<h3>' + college + '</h3>');
                     var collegetwo = list.collegetwo;
-                    console.log(collegetwo);
                     $('.here').append('<h3>' + collegetwo + '</h3>');
                     var description = list.description;
-                    console.log(description);
                     $('.here').append('<p>' + description + '</p>');
                     var link = list.link;
-                    console.log(link);
                     $('.here').append('<a href="' + link + '" target="_blank">'+'Click here for more info.'+'</a>');
                 });
               }
